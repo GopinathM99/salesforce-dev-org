@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="colorCodeText" type="String" />
+    <lightning:card title="Change Text Color">
+        <aura:set attribute="actions">
+            <c:colorPicker oncolorchange="{!c.handleColorChange}" />
+        </aura:set>
+        <p class="slds-p-horizontal_medium">
+            <div style="text-align: center; height: 30px; font-size: medium;">
+                <b style="{!'color:'+v.colorCodeText}"> This color is passed on from Lightning component </b>
+            </div>
+        </p>
+    </lightning:card>
+</aura:component>	

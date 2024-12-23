@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Add Two Numbers">
+        <lightning-input label="First Number" value={fnumber} name="first" onchange={handleChange}></lightning-input>
+        <lightning-input label="Second Number" value={snumber} name="second" onchange={handleChange}></lightning-input>
+        <c-result-component result="Gopinath"></c-result-component>
+        <lightning-badge slot="footer" label={total}></lightning-badge>
+    </lightning-card>
+    <c-parent></c-parent>
+    <lightning-card title="Wire Method Demo">
+        <div class="slds-m-around_large">
+            <template for:each={data} for:item="account" for:index="id">
+                <p key={account.Id}> {id} - {account.Name} </p>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-datatable key-field="id" data={data} columns={columns}>
+    </lightning-datatable>
+    <lightning-datatable key-field="id" data={accountRecords} columns={columns}>
+    </lightning-datatable>
+    <lightning-card title="Passing Parameters to Apex">
+        <lightning-input name="firstNumber" label="First Number" value={firstNumber} onchange={handleInputChange}></lightning-input>
+        <lightning-input name="secondNumber" label="Second Number" value={secondNumber} onchange={handleInputChange}></lightning-input>
+        <lightning-button slot="actions" label="Submit" onclick={handleClick}></lightning-button>
+        <lightning-badge slot="footer" label={sum}></lightning-badge>
+    </lightning-card>
+</template>

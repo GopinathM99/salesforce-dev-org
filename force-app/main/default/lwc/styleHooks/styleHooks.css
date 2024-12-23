@@ -1,0 +1,9 @@
+.myNewButtonStyle{
+    --slds-c-button-brand-color-background: orange;
+    --slds-c-button-brand-color-border: red;
+}
+
+.myNewBadgeStyle{
+    --slds-c-badge-color-background: green;
+    --slds-c-badge-text-color: white;
+}
